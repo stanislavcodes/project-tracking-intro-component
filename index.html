@@ -27,7 +27,7 @@
       <div class="logo">
         <a href="index.html"><img src="images/logo.svg" alt="logo" /></a>
       </div>
-      <nav>
+      <nav class="nav">
         <ul>
           <li><a class="uppercase" href="#">Product</a></li>
           <li><a class="uppercase" href="#">Features</a></li>
@@ -49,20 +49,21 @@
           <div class="new">NEW</div>
           <p class="monospace uppercase">New Monograph Dashboard</p>
         </div>
-        <h1 class="uppercase">Powerful insights <br> into your team</h1>
+        <h1 class="uppercase">
+          Powerful insights <br />
+          into your team
+        </h1>
         <h2>
           Project planning and time tracking <br />
           for agile teams
         </h2>
         <div class="cta-box">
-          <button class="btn btn-cta uppercase">
-            Schedule a demo
-          </button>
+          <button class="btn btn-cta uppercase">Schedule a demo</button>
           <p class="uppercase monospace">to see a preview</p>
         </div>
       </section>
       <section class="illustration">
-        <img src="images/illustration-devices.svg" alt="illustration devices">
+        <img src="images/illustration-devices.svg" alt="illustration devices" />
       </section>
     </main>
 
@@ -71,7 +72,7 @@
         >Challenge by
         <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
           >Frontend Mentor</a
-        >.</span
+        >. </span
       >
       <span>
         Coded by
@@ -81,7 +82,20 @@
       >
     </footer>
     <script>
-      console.log("hiiii ma boizzzzzz");
+      let hamburger = document.querySelector(".hamburger");
+      let closeMenu = document.querySelector(".close-menu");
+      let nav = document.querySelector(".nav");
+
+      hamburger.addEventListener("click", () => {
+        nav.style.display = "block";
+        closeMenu.style.display = "block";
+        hamburger.style.display = "none";
+      });
+      closeMenu.addEventListener("click", () => {
+        nav.style.display = "none";
+        closeMenu.style.display = "none";
+        hamburger.style.display = "block";
+      });
     </script>
   </body>
 </html>

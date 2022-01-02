@@ -22,9 +22,9 @@ html {
   font-size: 100%;
 }
 body {
+  background-color: #fff;
   font-family: var(--Barlow);
   font-weight: 400;
-  padding-left: var(--left-padding);
   position: relative;
   height: 100%;
 }
@@ -48,7 +48,7 @@ a {
 }
 h1 {
   font-size: 4rem;
-  line-height: 4rem;
+  line-height: 100%;
 }
 /* navigation */
 header {
@@ -73,7 +73,6 @@ ul li a {
 }
 ul li a:hover,
 ul li a:active {
-  transition: all 0.1s;
   border-bottom: 2px solid;
 }
 .login-link {
@@ -93,11 +92,13 @@ ul li span {
 .hamburger,
 .close-menu {
   display: none;
+  cursor: pointer;
 }
 /* main */
 main {
   height: 100%;
   display: flex;
+  padding-left: var(--left-padding);
 }
 main section {
   height: 43.75rem;
@@ -160,19 +161,158 @@ button:active {
 .illustration {
   overflow: hidden;
   width: 55%;
-  background: url(images/light-bg.svg) no-repeat;
+  background: url(images/light-bg-desktop.svg) no-repeat;
   background-position: top right;
   background-size: contain;
   padding-top: 13rem;
 }
 
 .attribution {
-  font-size: 14px;
+  font-size: 16px;
   margin-top: 3rem;
   text-align: center;
+  display: flex;
+  justify-content: center;
 }
 .attribution a {
   color: var(--Red);
+  font-family: var(--Barlow-Condensed);
+  text-transform: uppercase;
+  letter-spacing: 0.044rem;
+}
+
+@media screen and (max-width: 1199px) and (min-width: 700px) {
+  :root {
+    /* other */
+    --left-padding: 4rem; /* 256px */
+  }
+
+  header {
+    top: 3rem;
+  }
+}
+@media screen and (max-width: 899px) {
+  .illustration {
+    background: url(images/light-bg-mobile.svg) no-repeat;
+    background-position: top right;
+    background-size: contain;
+  }
+  .info {
+    padding-top: 18rem;
+  }
+  h1 {
+    font-size: 2.5rem;
+  }
+}
+@media screen and (max-width: 699px) and (orientation: portrait) {
+  :root {
+    /* other */
+    --left-padding: 2rem; /* 256px */
+  }
+  .illustration {
+    background: url(images/light-bg-mobile.svg) no-repeat;
+  }
+  header {
+    top: 2.375rem;
+  }
+  main {
+    flex-direction: column-reverse;
+  }
+  main section {
+    height: 50vh;
+  }
+  .info,
+  .illustration {
+    width: 100%;
+  }
+  .info {
+    padding-top: 1.625rem;
+    height: 18.75rem;
+  }
+  .info h2 {
+    margin: 1rem 0 1.75rem 0;
+  }
+  .illustration {
+    background-position: top right;
+    background-position-y: -6rem;
+    background-size: 58%;
+    padding-top: 8.125rem;
+  }
+  .illustration img {
+    height: 15rem;
+  }
+  button {
+    width: 9.625rem;
+    height: 2.5rem;
+    font-size: 0.875rem;
+  }
+  .cta-box p {
+    font-size: 0.875rem;
+    letter-spacing: 0.235rem;
+  }
+  .hamburger {
+    display: block;
+  }
+  nav {
+    padding: 1.625rem 0;
+    position: absolute;
+    border-radius: 5px;
+    box-shadow: -3px 0 5px rgba(99, 99, 99, 0.377),
+      3px 0 5px rgba(99, 99, 99, 0.377);
+    top: 6.25rem;
+    left: 50%;
+    width: 19.5rem;
+    height: 14.75rem;
+    transform: translate(calc(-50% - (var(--left-padding)/2)), 0);
+    display: none;
+    background-color: #ffffff;
+  }
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    justify-content: space-between;
+    height: 100%;
+  }
+  ul li:nth-child(4) {
+    margin: 0;
+  }
+  ul li span {
+    height: 1px;
+    width: 16rem;
+  }
+  .attribution {
+    margin: 3rem 0;
+    flex-direction: column;
+  }
+  .monospace {
+    font-size: 0.875rem;
+    letter-spacing: 0.235rem;
+  }
+}
+@media screen and (max-width: 359px) {
+  :root {
+    /* other */
+    --left-padding: 1.75rem; /* 256px */
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  main section {
+    height: 65vh;
+  }
+  .illustration {
+    background-position-y: -2rem;
+  }
+  .illustration img {
+    height: 12rem;
+  }
+  .new{
+    font-size: 0.75rem;
+  }
+  .cta-box p, .monospace {
+    font-size: 0.75rem;
+  }
 }
 
 @media screen and (min-width: 1699px) {
@@ -194,10 +334,5 @@ button:active {
     margin-top: 3rem;
     font-size: 18px;
     text-align: center;
-  }
-}
-@media screen and (min-width: 799px) {
-  h1 {
-    font-size: 4rem;
   }
 }

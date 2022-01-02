@@ -1,39 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <!-- favicon -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- main css file -->
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | Project tracking intro component</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <a href="index.html"><img src="images/logo.svg" alt="logo" /></a>
+      </div>
+      <nav>
+        <ul>
+          <li><a class="uppercase" href="#">Product</a></li>
+          <li><a class="uppercase" href="#">Features</a></li>
+          <li><a class="uppercase" href="#">Pricing</a></li>
+          <li><span></span></li>
+          <li><a class="uppercase login-link" href="#">Login</a></li>
+        </ul>
+      </nav>
+      <div class="hamburger">
+        <img src="/images/icon-hamburger.svg" alt="open menu" />
+      </div>
+      <div class="close-menu">
+        <img src="/images/icon-close.svg" alt="close menu btn" />
+      </div>
+    </header>
+    <main>
+      <section class="info">
+        <div class="new-box">
+          <div class="new">NEW</div>
+          <p class="monospace uppercase">New Monograph Dashboard</p>
+        </div>
+        <h1 class="uppercase">Powerful insights <br> into your team</h1>
+        <h2>
+          Project planning and time tracking <br />
+          for agile teams
+        </h2>
+        <div class="cta-box">
+          <button class="btn btn-cta uppercase">
+            Schedule a demo
+          </button>
+          <p class="uppercase monospace">to see a preview</p>
+        </div>
+      </section>
+      <section class="illustration">
+        <img src="images/illustration-devices.svg" alt="illustration devices">
+      </section>
+    </main>
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Project tracking intro component</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-  Product
-  Features
-  Pricing
-  Login
-
-  New
-  Monograph Dashboard
-
-  Powerful insights into your team
-  Project planning and time tracking for agile teams
-
-  Schedule a demo
-  to see a live preview
-  
-  <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
-    </p>
-  </footer>
-</body>
+    <footer class="attribution">
+      <span
+        >Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >.</span
+      >
+      <span>
+        Coded by
+        <a href="https://www.instagram.com/stanislav.codes/" target="_blank"
+          >Stanislav Korchevskyi</a
+        >.</span
+      >
+    </footer>
+    <script>
+      console.log("hiiii ma boizzzzzz");
+    </script>
+  </body>
 </html>

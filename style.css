@@ -100,7 +100,8 @@ main {
   display: flex;
   padding-left: var(--left-padding);
 }
-main section {
+main section,
+main figure {
   height: 43.75rem;
 }
 .info {
@@ -218,7 +219,8 @@ button:active {
   main {
     flex-direction: column-reverse;
   }
-  main section {
+  main section,
+  main figure {
     height: 50vh;
   }
   .info,
@@ -263,7 +265,7 @@ button:active {
     left: 50%;
     width: 19.5rem;
     height: 14.75rem;
-    transform: translate(calc(-50% - (var(--left-padding)/2)), 0);
+    transform: translate(calc(-50% - (var(--left-padding) / 2)), 0);
     display: none;
     background-color: #ffffff;
   }
@@ -298,7 +300,8 @@ button:active {
   h1 {
     font-size: 2rem;
   }
-  main section {
+  main section,
+  main figure {
     height: 65vh;
   }
   .illustration {
@@ -307,10 +310,11 @@ button:active {
   .illustration img {
     height: 12rem;
   }
-  .new{
+  .new {
     font-size: 0.75rem;
   }
-  .cta-box p, .monospace {
+  .cta-box p,
+  .monospace {
     font-size: 0.75rem;
   }
 }
